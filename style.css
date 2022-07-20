@@ -134,7 +134,7 @@ body {
 @media (min-width: 860px) {
   .container {
     width: 42%;
-    max-width: 750px;
+    max-width: 605px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, auto);
     grid-template-areas:

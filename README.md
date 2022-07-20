@@ -18,7 +18,6 @@ This is a solution to the [Single price grid component challenge on Frontend Men
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
--
 
 ## Overview
 
@@ -31,9 +30,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](C:\Users\joanf\Desktop\CSS\FrontEndMentor\SinglePriceGridComponent\singlePrice_mobile.png)
+![](./images/singlePrice_mobile.png)
 
-![](C:\Users\joanf\Desktop\CSS\FrontEndMentor\SinglePriceGridComponent\singlePrice_desktop.png)
+![](./images/singlePrice_desktop.png)
 
 ### Links
 
