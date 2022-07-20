@@ -14,6 +14,11 @@ body {
   width: 85%;
   margin: 4rem auto; /* 64px */
   border: none;
+  display: grid;
+  grid-template-areas:
+    "community"
+    "subscription"
+    "about";
 }
 
 .item {
@@ -24,6 +29,7 @@ body {
   background-color: hsl(0, 0%, 100%);
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+  grid-area: community;
 }
 
 .community__title {
@@ -48,6 +54,7 @@ body {
 .subscription {
   background-color: hsl(179, 61%, 44%);
   color: hsl(0, 0%, 100%);
+  grid-area: subscription;
 }
 
 .subscription__title {
@@ -75,6 +82,17 @@ body {
   border: none;
   border-radius: 0.3rem;
   box-shadow: 0 1px 20px 0.5px hsl(169.7, 26.1%, 43.5%);
+  transition: all 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.subscription__btn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(71, 73%, 54%);
+}
+
+.subscription__btn:active {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(179, 61%, 44%);
 }
 
 .about {
@@ -82,6 +100,7 @@ body {
   border-bottom-right-radius: 0.25rem;
   background-color: hsl(179, 47%, 52%);
   color: hsl(0, 0%, 100%);
+  grid-area: about;
 }
 
 .about__title {
@@ -110,4 +129,42 @@ body {
   opacity: 0.5;
   position: relative;
   bottom: 0.3rem;
+}
+
+@media (min-width: 860px) {
+  .container {
+    width: 42%;
+    max-width: 750px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "community community"
+      "subscription about";
+  }
+
+  .item {
+    padding: 2rem;
+  }
+
+  .community__title {
+    font-size: 1.4rem;
+  }
+
+  .community__text:nth-of-type(2) {
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+  .community__text:nth-of-type(1) {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subscription {
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .about {
+    border-bottom-right-radius: 0.25rem;
+  }
 }
